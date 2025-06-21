@@ -21,24 +21,19 @@ A collection of small, single‑purpose userscripts for enhancing your day‑to�
 
 \### How it works
 
-The EWU portal often hides portions of a faculty profile behind CSS classes such as `d‑none` or inline `style="display:none"`. This script:
+The EWU portal often hides portions of a faculty profile behind CSS classes such as `d‑none` or `ng-hide`. This script:
 
 1. Waits for the page to finish loading.
-2. Locates "hidden" elements inside any element with the CSS selector `[data-hidden="true"], .d-none, [style*="display:none"], etc`.
-3. Removes the hiding attributes and adds a subtle highlight so you can see what was revealed.
+2. Locates "hidden" elements inside any element with the CSS selector `.table td.ng-hide, .table th.ng-hide`.
+3. Removes the hiding attributes (`ng-hide`).
 
 No requests are sent to third‑party servers; everything runs locally in your browser.
 
 \### Usage
 
 * **Install** the script (see *Installation* below).
-* Navigate to any faculty profile or the “Faculty List” page.
-* Hidden contact info, publications, and other data should now appear automatically.
-
-\### Customisation tips
-
-* To change the highlight colour, edit the line that inserts the `background-color` style near the bottom of the script.
-* To skip highlighting altogether, comment out or delete that line.
+* Navigate to My Class Schedule page.
+* Hidden contact info, Faculty Name, Initial should now appear automatically.
 
 ---
 
