@@ -12,7 +12,7 @@ A collection of small, single‑purpose userscripts for enhancing your day‑to�
 
 | Script                            | File                         | What it does                                                                                                                                     |
 | --------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Unhide Faculty Info**           | `unhide‑faculty.user.js`     | Reveals hidden faculty profile details (e‑mail, Faculty Name, initial, ) that the portal conceals with CSS or conditional HTML. |
+| **Unhide Faculty Info**           | `unhideFacultyInfo.user.js`     | Reveals hidden faculty profile details (e‑mail, Faculty Name, initial, ) that the portal conceals with CSS or conditional HTML. |
 | **Auto Login (+ Captcha Solver)** | `autoCaptchaSolver.user.js` | Fills in your student credentials and automatically solves the arithmetic captcha, allowing one‑click sign‑in.          |
 
 ---
