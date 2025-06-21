@@ -20,6 +20,7 @@ A collection of small, single‑purpose userscripts for enhancing your day‑to�
 ## 1  Unhide Faculty Info
 
 \### How it works
+
 The EWU portal often hides portions of a faculty profile behind CSS classes such as `d‑none` or inline `style="display:none"`. This script:
 
 1. Waits for the page to finish loading.
