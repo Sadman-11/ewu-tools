@@ -36,11 +36,25 @@
 
         function replaceHeader() {
             const table = document.querySelector('#tblData');
-            if (table?.rows?.length > 0) {
-                const headerCell = table.rows[0].cells[4];
-                if (headerCell && headerCell.innerText.toLowerCase().includes('dedicated')) {
-                    headerCell.innerHTML = "<b>Faculty</b>";
-                }
+            if (!table || table.rows.length === 0) return;
+
+            const headerRow = table.rows[0];
+
+            // Changing Table Headers
+            if (headerRow.cells[2]) {
+                headerRow.cells[2].innerHTML = "<b>Faculty</b>";
+            }
+
+            if (headerRow.cells[3]) {
+                headerRow.cells[3].innerHTML = "<b>Capacity</b>";
+            }
+
+            if (headerRow.cells[4]?.innerText.toLowerCase().includes('dedicated')) {
+                headerRow.cells[4].innerHTML = "<b>Timing</b>";
+            }
+
+            if (headerRow.cells[5]) {
+                headerRow.cells[5].innerHTML = "<b>Room No</b>";
             }
         }
 
@@ -48,8 +62,11 @@
             const rows = document.querySelectorAll('tr[ng-repeat]');
             rows.forEach(row => {
                 const scope = angular.element(row).scope();
-                if (scope?.c?.ShortName) {
-                    row.cells[4].innerText = scope.c.ShortName;
+                if (scope?.c) {
+                    row.cells[2].innerText = scope.c.ShortName || "";
+                    row.cells[3].innerText = scope.c.SeatTaken + "/" + scope.c.SeatCapacity || ""; // Seat info
+                    row.cells[4].innerText = scope.c.TimeSlotName || "";
+                    row.cells[5].innerText = scope.c.RoomCode || "";
                 }
             });
         }
